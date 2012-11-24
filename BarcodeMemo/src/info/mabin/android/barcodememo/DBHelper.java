@@ -1,4 +1,4 @@
-package org.dlug.android.barcodememo;
+package info.mabin.android.barcodememo;
 
 import java.util.List;
 
