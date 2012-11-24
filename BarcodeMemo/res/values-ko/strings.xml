@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">바코드 메모</string>
+    <string name="menu_settings">설정</string>
+    <string name="title_activity_barcode_memo">바코드 메모</string>
+	<string name="scan">스캔</string>
+	<string name="share">공유</string>
+	<string name="exit">종료</string>
+	<string name="share_subject">바코드 스캔 결과</string>
+	<string name="share_dialog_title">이용할 앱</string>
+	<string name="clear">초기화</string>
+	<string name="error">오류!</string>
+	<string name="undo">실행취소</string>
+	<string name="redo">재실행</string>
+	
+	<string name="unknown_error">알 수 없는 오류!</string>
+	<string name="ok">확인</string>
+	<string name="cancel">취소</string>
+		
+	<string name="clearall_title">전체 삭제</string>
+	<string name="clearall_message">모든 데이터를 삭제하겠습니까?</string>
+	
+	<string name="welcome_message">환영합니다!
+\n
+\n바코드를 스캔하기 위해서 \'스캔\'버튼을 눌러주세요. 스캔한 결과가 곧바로 글상자에 표시됩니다.
+\n
+\n모든 글은 스캔을 할 때와 종료할 때 자동으로 저장됩니다.
+\n
+\n작업내용을 비롯하여 모든 데이터를 삭제하려면 \'초기화\'버튼을 1~2초정도 누르세요.</string>
+
+	<string name="change_log_header">=== 변동사항 ===</string>
+	<string name="change_log_1">▶ 1.0.0
+\n- 배포시작!</string>
+	<string name="change_log_2">▶ 1.1.0
+\n- 간단한 되돌림/재실행 기능 추가
+\n　제한없는 되돌림/재실행
+\n　작업내역까지 삭제하기위해서는 \'초기화\'버튼을 1~2초정도 누르세요.</string>
+	<string name="change_log_3">▶ 1.1.1
+\n- 공유기능 버그 수정
+\n　빈 값으로 공유 되던 점 수정
+\n- 일부 글 수정
+\n　잘못적힌 부분 수정</string>
+</resources>

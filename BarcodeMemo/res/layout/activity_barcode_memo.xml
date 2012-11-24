@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+	    <Button
+	        android:id="@+id/btnScan"
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text="@string/scan" />
+	
+	    <Button
+	        android:id="@+id/btnShare"
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text="@string/share" />
+		
+	</LinearLayout>
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+	 <Button
+	        android:id="@+id/btnUndo"
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text="@string/undo" />
+		<Button
+	        android:id="@+id/btnRedo"
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text="@string/redo" />
+	    <Button
+	        android:id="@+id/btnClear"
+	        android:layout_weight="1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text="@string/clear" />
+	 </LinearLayout>
+	 <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+	     <EditText
+	         android:id="@+id/txtCode"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
+	         android:ems="10"
+	         android:enabled="true"
+	         android:gravity="center_vertical|top"
+	         android:inputType="textMultiLine"
+	         android:scrollHorizontally="false"
+	         android:scrollbarStyle="insideOverlay"
+	         android:scrollbars="horizontal|vertical"
+	         android:textStyle="normal"
+	         android:typeface="monospace" />
+
+	</LinearLayout>
+</LinearLayout>

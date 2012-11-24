@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">BarcodeMemo</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_barcode_memo">Barcode Memo</string>
+	<string name="scan">Scan</string>
+	<string name="share">Share</string>
+	<string name="exit">Exit</string>
+	<string name="share_subject">Barcode Scan Result</string>
+	<string name="share_dialog_title">Share via</string>
+	<string name="clear">Clear</string>
+	<string name="undo">Undo</string>
+	<string name="redo">Redo</string>
+	
+	<string name="error">Error!</string>
+	<string name="unknown_error">Unknown Error!</string>
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+	
+	<string name="clearall_title">Clear All</string>
+	<string name="clearall_message">Do you want to clear with job history?</string>
+	
+	<string name="welcome_message">Welcome!
+\n
+\nPlease scan Barcode with \'Scan\' button. So barcode result is written in Textbox.
+\n
+\nAll text is autosaved when you scan or exit.
+\n
+\nIf you want to clear all data with job history, push \'Clear\' button 1~2 seconds.</string>
+	
+	<string name="change_log_header">=== ChangeLog ===</string>
+	<string name="change_log_1">▶ 1.0.0
+\n- Launching!</string>
+	<string name="change_log_2">▶ 1.1.0
+\n- Add Simple Undo/Redo Function
+\n　Undo/Redo is Unlimited.
+\n　Push \'Clear\' button 1~2 seconds for clear with job history.</string>
+	<string name="change_log_3">▶ 1.1.1
+\n- Share bug is fixed
+\n　Fixed bug that values are not sharing via SMS etc.
+\n- Some text is modified
+\n　Modified wrong text.</string>
+</resources>
