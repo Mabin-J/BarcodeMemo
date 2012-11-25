@@ -39,4 +39,6 @@
 \n　Fixed bug that values are not sharing via SMS etc.
 \n- Some text is modified
 \n　Modified wrong text.</string>
+	<string name="change_log_4">▶ 1.1.2
+\n- Undo/Redo bug is fixed</string>
 </resources>

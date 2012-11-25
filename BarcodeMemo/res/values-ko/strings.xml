@@ -39,4 +39,6 @@
 \n　빈 값으로 공유 되던 점 수정
 \n- 일부 글 수정
 \n　잘못적힌 부분 수정</string>
+	<string name="change_log_4">▶ 1.1.2
+\n- 실행취소/재실행 버그 수정</string>
 </resources>
