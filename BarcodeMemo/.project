@@ -3,6 +3,7 @@
 	<name>BarcodeMemo</name>
 	<comment></comment>
 	<projects>
+		<project>com.google.zxing.client.android.CaptureActivity</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
