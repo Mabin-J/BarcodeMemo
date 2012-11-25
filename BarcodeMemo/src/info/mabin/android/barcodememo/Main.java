@@ -14,7 +14,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Base64;
-import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
@@ -36,8 +35,6 @@ public class Main extends Activity{
 
 		txtCode = (EditText) findViewById(R.id.txtCode);
 		scanIntent = new Intent("com.google.zxing.client.android.SCAN");
-//		scanIntent.putExtra("SCAN_MODE", "QR_CODE_MODE,ONE_D_MODE");
-//		scanIntent.putExtra("SCAN_FORMATS", "CODABAR");
 		
 		PackageManager pm = this.getPackageManager();
 		PackageInfo packageInfo = null;
@@ -185,10 +182,7 @@ public class Main extends Activity{
 					txtCode.append(contents + "\n");
 					addString(txtCode.getText().toString());
 					txtCode.setSelection(txtCode.length());
-//					backupString = txtCode.getText().toString();
 				}
-//			}else if (resultCode == RESULT_CANCELED){
-//				showDialog(R.string.result_failed, getString(R.string.result_failed_why));
 			}
 		}
 	}
