@@ -9,8 +9,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.*;
 
@@ -23,7 +27,7 @@ public class Main extends Activity{
 	SQLiteDatabase oSQLiteDB;
 	String backupString;
 	
-	final int VERSION = 3;
+	int VERSION;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -35,16 +39,30 @@ public class Main extends Activity{
 //		scanIntent.putExtra("SCAN_MODE", "QR_CODE_MODE,ONE_D_MODE");
 //		scanIntent.putExtra("SCAN_FORMATS", "CODABAR");
 		
+		PackageManager pm = this.getPackageManager();
+		PackageInfo packageInfo = null;
+		try {
+			packageInfo = pm.getPackageInfo(this.getPackageName(), 0);
+		} catch (NameNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		int VERSION = packageInfo.versionCode;
+		
 		List<String> changeLog = new ArrayList<String>();
 		changeLog.add(getString(R.string.change_log_1));
 		changeLog.add(getString(R.string.change_log_2));
 		changeLog.add(getString(R.string.change_log_3));
+		changeLog.add(getString(R.string.change_log_4));
 		
-		oDBHelper = new DBHelper(this, null, VERSION, getString(R.string.welcome_message), getString(R.string.change_log_header), changeLog);
-		backupString = txtCode.getText().toString();
+		oDBHelper = new DBHelper(this, null, VERSION, 
+				getString(R.string.welcome_message), 
+				getString(R.string.change_log_header), 
+				changeLog);
 		
 		txtCode.setText(oDBHelper.getLatestData());
 		txtCode.setSelection(txtCode.length());
+		backupString = txtCode.getText().toString();
 		
 		dataIdx = oDBHelper.getLatestID();
 		undoPnt = 0;
@@ -59,7 +77,7 @@ public class Main extends Activity{
 
 	@Override
 	public void onPause() {
-		oDBHelper.putData(txtCode.getText().toString());
+		addString(txtCode.getText().toString());
 
 		super.onPause();
 	}
