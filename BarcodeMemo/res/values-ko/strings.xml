@@ -41,4 +41,7 @@
 \n　잘못적힌 부분 수정</string>
 	<string name="change_log_4">▶ 1.1.2
 \n- 실행취소/재실행 버그 수정</string>
+	<string name="change_log_5">▶ 1.2.0
+\n- Zxing 2.2 적용
+\n- 연속 스캔기능 추가</string>
 </resources>

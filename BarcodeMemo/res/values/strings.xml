@@ -41,4 +41,7 @@
 \n　Modified wrong text.</string>
 	<string name="change_log_4">▶ 1.1.2
 \n- Undo/Redo bug is fixed</string>
+	<string name="change_log_5">▶ 1.2.0
+\n- Apply Zxing 2.2
+\n- Add Continuous Scan</string>
 </resources>

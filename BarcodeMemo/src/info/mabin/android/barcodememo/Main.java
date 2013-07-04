@@ -52,6 +52,7 @@ public class Main extends Activity{
 		changeLog.add(getString(R.string.change_log_2));
 		changeLog.add(getString(R.string.change_log_3));
 		changeLog.add(getString(R.string.change_log_4));
+		changeLog.add(getString(R.string.change_log_5));
 		
 		oDBHelper = new DBHelper(this, null, VERSION, 
 				getString(R.string.welcome_message), 
@@ -79,13 +80,6 @@ public class Main extends Activity{
 
 		super.onPause();
 	}
-/*
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_barcode_memo, menu);
-		return true;
-	}
-*/
 	
 	private void addString(String text){
     	if(!backupString.equals(txtCode.getText().toString())){
@@ -133,13 +127,13 @@ public class Main extends Activity{
 	
 	private final Button.OnLongClickListener onLongClickClear = new Button.OnLongClickListener() {
 		public boolean onLongClick(View v) {
-	    	showQuestion(R.string.clearall_title, R.string.clearall_message, onOkClickClear);
+	    	showQuestion(R.string.clearall_title, R.string.clearall_message, onClickOkClearAll);
 			
 			return true;
 		}
 	};
 	
-	private final DialogInterface.OnClickListener onOkClickClear = new DialogInterface.OnClickListener(){
+	private final DialogInterface.OnClickListener onClickOkClearAll = new DialogInterface.OnClickListener(){
 		public void onClick(DialogInterface dialog, int which) {
 			oDBHelper.clearAll();
 			dataIdx = 0;
@@ -177,8 +171,8 @@ public class Main extends Activity{
 		if (requestCode == 0){
 			if (resultCode == RESULT_OK){
 				String contents = intent.getStringExtra("SCAN_RESULT");
-				if(contents.equals("RHIuTWFiaW4ncyBFYXN0ZXIgRWdnZXhpdAo=")){
-					txtCode.append(new String(Base64.decode("7KCAIOuVjOusuOyXkArqsIDsirTslYTtjIztlojsnYQg66qo65OgIOu2hOuTpOyXkOqyjArso4TshqHtlZjri6TripQg66eQ7JSA7J2ECuydtCDsnpDrpqzrpbwg67mM66Ck7IScIOuTnOumveuLiOuLpC4KCuygleunkCDso4TshqHtlanri4jri6QuCg==", 0)));
+				if(contents.equals("TWFiaW4ncyBFYXN0ZXIgRWdnCg==")){
+					txtCode.append(new String(Base64.decode("VGhhbmsgeW91IGZvciBmaW5kaW5nIHRoaXMuIDpECg==", 0)));
 				} else {
 					txtCode.append(contents + "\n");
 					addString(txtCode.getText().toString());
