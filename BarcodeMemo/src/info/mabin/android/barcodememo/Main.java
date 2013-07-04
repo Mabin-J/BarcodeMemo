@@ -35,6 +35,7 @@ public class Main extends Activity{
 
 		txtCode = (EditText) findViewById(R.id.txtCode);
 		scanIntent = new Intent("com.google.zxing.client.android.SCAN");
+		scanIntent.putExtra("RESULT_DISPLAY_DURATION_MS", 0L);
 		
 		PackageManager pm = this.getPackageManager();
 		PackageInfo packageInfo = null;
