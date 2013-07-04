@@ -19,6 +19,9 @@
 	<string name="clearall_title">Clear All</string>
 	<string name="clearall_message">Do you want to clear with job history?</string>
 	
+	<string name="continuous_scan_title">Scan Method</string>
+	<string name="continuous_scan_message">Do you want to Continuous Scan?</string>
+	
 	<string name="welcome_message">Welcome!
 \n
 \nPlease scan Barcode with \'Scan\' button. So barcode result is written in Textbox.

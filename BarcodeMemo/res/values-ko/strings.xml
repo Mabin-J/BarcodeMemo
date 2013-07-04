@@ -19,6 +19,9 @@
 	<string name="clearall_title">전체 삭제</string>
 	<string name="clearall_message">모든 데이터를 삭제하겠습니까?</string>
 	
+	<string name="continuous_scan_title">스캔 방법</string>
+	<string name="continuous_scan_message">연속 스캔을 사용하시겠습니까?</string>
+	
 	<string name="welcome_message">환영합니다!
 \n
 \n바코드를 스캔하기 위해서 \'스캔\'버튼을 눌러주세요. 스캔한 결과가 곧바로 글상자에 표시됩니다.

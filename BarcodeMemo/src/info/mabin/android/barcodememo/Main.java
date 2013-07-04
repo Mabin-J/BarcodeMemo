@@ -20,11 +20,11 @@ import android.widget.*;
 public class Main extends Activity{
 	int dataIdx;
 	int undoPnt;
-	EditText txtCode;
-	Intent scanIntent;
-	DBHelper oDBHelper;
-	SQLiteDatabase oSQLiteDB;
-	String backupString;
+	private EditText txtCode;
+	private Intent scanIntent;
+	private DBHelper oDBHelper;
+	private String backupString;
+	private Boolean useContinuousScan = false; 
 	
 	int VERSION;
 
@@ -98,11 +98,8 @@ public class Main extends Activity{
 	
 	private final Button.OnClickListener onClickScan = new Button.OnClickListener() {
 	    public void onClick(View v) {
-	    	try{
-	    		startActivityForResult(scanIntent, 0);
-	    	} catch (Exception e){
-	    		showDialog(R.string.error, R.string.unknown_error);
-	    	}
+	    	showQuestion(R.string.continuous_scan_title, R.string.continuous_scan_message, 
+	    			onClickOkContinuousScan, onClickCancelContinuousScan);
 	    }
 	};
 
@@ -142,6 +139,27 @@ public class Main extends Activity{
 		}
 	};
 	
+	private final DialogInterface.OnClickListener onClickOkContinuousScan = new DialogInterface.OnClickListener(){
+		public void onClick(DialogInterface dialog, int which) {
+			useContinuousScan = true;
+			barcodeScan();
+		}
+	};
+	
+	private void barcodeScan(){
+		try{
+    		startActivityForResult(scanIntent, 0);
+    	} catch (Exception e){
+    		showDialog(R.string.error, R.string.unknown_error);
+    	}
+	}
+	
+	private final DialogInterface.OnClickListener onClickCancelContinuousScan = new DialogInterface.OnClickListener(){
+		public void onClick(DialogInterface dialog, int which) {
+			barcodeScan();
+		}
+	};
+	
 	private final Button.OnClickListener onClickUndo = new Button.OnClickListener() {
 	    public void onClick(View v) {
     		addString(txtCode.getText().toString());
@@ -178,6 +196,10 @@ public class Main extends Activity{
 					addString(txtCode.getText().toString());
 					txtCode.setSelection(txtCode.length());
 				}
+				if(useContinuousScan)
+					barcodeScan();
+			} else {
+				useContinuousScan = false;
 			}
 		}
 	}
@@ -196,6 +218,17 @@ public class Main extends Activity{
 		builder.setMessage(message);
 		builder.setPositiveButton(getString(R.string.ok), onClickListener);
 		builder.setNegativeButton(getString(R.string.cancel), null);
+		builder.show();
+	}
+	
+	private void showQuestion(int title, int message, 
+			DialogInterface.OnClickListener onClickOkListener,
+			DialogInterface.OnClickListener onClickCancelListener){
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle(title);
+		builder.setMessage(message);
+		builder.setPositiveButton(getString(R.string.ok), onClickOkListener);
+		builder.setNegativeButton(getString(R.string.cancel), onClickCancelListener);
 		builder.show();
 	}
 }
