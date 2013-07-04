@@ -25,6 +25,7 @@
 	<string name="welcome_message">Welcome!
 \n
 \nPlease scan Barcode with \'Scan\' button. So barcode result is written in Textbox.
+\n(Push \'Back\' button for stopping scan in continuous mode.)
 \n
 \nAll text is autosaved when you scan or exit.
 \n
@@ -32,19 +33,20 @@
 	
 	<string name="change_log_header">=== ChangeLog ===</string>
 	<string name="change_log_1">▶ 1.0.0
-\n- Launching!</string>
+\n- Launched!</string>
 	<string name="change_log_2">▶ 1.1.0
-\n- Add Simple Undo/Redo Function
-\n　Undo/Redo is Unlimited.
-\n　Push \'Clear\' button 1~2 seconds for clear with job history.</string>
+\n- Added Simple Undo/Redo Function
+\n  Undo/Redo is Unlimited
+\n  Push \'Clear\' button 1~2 seconds for clearing all data.</string>
 	<string name="change_log_3">▶ 1.1.1
 \n- Share bug is fixed
-\n　Fixed bug that values are not sharing via SMS etc.
-\n- Some text is modified
-\n　Modified wrong text.</string>
+\n  Fixed bug that values are not sharing via SMS etc.
+\n- Fixed some text</string>
 	<string name="change_log_4">▶ 1.1.2
-\n- Undo/Redo bug is fixed</string>
+\n- Fixed Undo/Redo bug</string>
 	<string name="change_log_5">▶ 1.2.0
-\n- Apply Zxing 2.2
-\n- Add Continuous Scan</string>
+\n- Applied Zxing 2.2
+\n- Added Continuous Scan
+\n  Push \'Back\' button for stopping scan.
+\n- Fixed some text</string>
 </resources>
