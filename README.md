@@ -6,3 +6,11 @@ Result is Auto-saving and It can be shared via SMS, E-Mail, Cloud Storage, SNS, 
 
 Zxing-2.2 is needed.
 (https://code.google.com/p/zxing/)
+
+Feature
+-------
+- Scanning Barcode
+- Continuous Scanning
+- Auto-saving
+- Undo/Redo
+- Share to SMS, E-Mail, etc
