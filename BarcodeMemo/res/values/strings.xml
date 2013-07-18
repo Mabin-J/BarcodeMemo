@@ -49,4 +49,7 @@
 \n- Added Continuous Scan
 \n  Push \'Back\' button for stopping scan.
 \n- Fixed some text</string>
+	<string name="change_log_6">▶ 1.2.1
+\n- Fixed Newline Character Bug
+\n  Fixed bug that all of content in one line when open shared textfile in Windows-based OS</string>
 </resources>
