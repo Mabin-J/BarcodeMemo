@@ -52,6 +52,7 @@ public class Main extends Activity{
 		changeLog.add(getString(R.string.change_log_3));
 		changeLog.add(getString(R.string.change_log_4));
 		changeLog.add(getString(R.string.change_log_5));
+		changeLog.add(getString(R.string.change_log_6));
 		
 		oDBHelper = new DBHelper(this, null, VERSION, 
 				getString(R.string.welcome_message), 
@@ -107,7 +108,11 @@ public class Main extends Activity{
 			Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
 			sharingIntent.setType("text/plain");
 			sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.share_subject));
-			sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, txtCode.getText().toString());
+			
+			String tmpContent = txtCode.getText().toString();
+			tmpContent = tmpContent.replace("\n", "\r\n");
+			
+			sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, tmpContent);
 			
 			startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_dialog_title)));
 	    }
